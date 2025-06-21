@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <i class="fa fa-book" style="font-size:36px"></i>
+        <h2>Library</h2>
+    </header>
+    <button class="showDialog">Add Books</button>
+    <div>
+        <dialog class="dialog">
+            <p>Add Book</p> 
+            <button class="closeButton">x</button>
+            <form action="script.js" method="dialog" class="addBookForm">
+                <fieldset>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author" required>
+
+                    <label for="pages">Pages</label>
+                    <input type="text"name="pages" id="pages" required>
+
+                    <p>Read</p>
+                    <label for="read" class="switch">                    
+                        <input type="checkbox" name="read" id="read" class="checkBox">
+                        <span class="slider round"></span>
+                    </label>
+
+                </fieldset>
+                <button class="addButton" type="submit">Add</button>
+            </form>
+        </dialog>
+        <div class="booksContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="bookData">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
